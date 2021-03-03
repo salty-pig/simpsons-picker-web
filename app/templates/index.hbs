@@ -1,7 +1,17 @@
 {{page-title "Index"}}
-name: {{@model.name}}
-Season: {{@model.season}}
-Episode: {{@model.number}}
+
+<div class="card" style="width: 45%">
+  <img src={{@model.image.original}} class="card-img-top" alt="episode image">
+  <div class="card-body">
+    <h5 class="card-title">Episode Name: {{@model.name}}</h5>
+    <p class="card-text">{{@model.summary}}</p>
+  </div>
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item">Season: {{@model.season}}</li>
+    <li class="list-group-item">Episode: {{@model.number}}</li>
+  </ul>
+</div>
+
 {{outlet}}
 
 
